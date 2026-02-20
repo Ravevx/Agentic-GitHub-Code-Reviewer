@@ -1,7 +1,7 @@
 # 🤖 AI Code Review Agent
 
 > A fully local, privacy-safe multi-agent system that automatically reviews  
-> any GitHub repository and generates a detailed code review report —  
+> any GitHub repository and generates a detailed code review report 
 > powered by LangGraph + LM Studio.  
 > **No API keys. No data leaves your machine.**
 
