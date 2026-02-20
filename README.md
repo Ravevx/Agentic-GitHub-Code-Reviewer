@@ -1,16 +1,7 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
-# make me a readme file for github please, on how to run, or streamlit it, for professional github. and our results.
-
-Here's your professional GitHub README:
-
-***
-
-```markdown
 # 🤖 AI Code Review Agent
 
 > A fully local, privacy-safe multi-agent system that automatically reviews
-> any GitHub repository and generates a detailed code review report —
+> any GitHub repository and generates a detailed code review report
 > powered by LangGraph + LM Studio. No API keys. No data leaves your machine.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
@@ -19,7 +10,6 @@ Here's your professional GitHub README:
 ![FastAPI](https://img.shields.io/badge/FastAPI-REST%20API-red)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web%20UI-orange)
 
----
 
 ## 📌 What It Does
 
@@ -31,11 +21,9 @@ Give it any GitHub repository URL → it automatically:
 - 💡 **Suggests** minimal, targeted code fixes
 - 📋 **Generates** a full markdown report with executive summary + score
 
----
 
 ## 🏗️ Architecture
 
-```
 
 GitHub URL
 ↓
@@ -49,7 +37,6 @@ GitHub URL
 ↓
 review_YYYYMMDD_HHMMSS.md
 
-```
 
 ### Agent Roles
 
@@ -60,7 +47,7 @@ review_YYYYMMDD_HHMMSS.md
 | **Suggester** | Generates before/after code fixes for every finding |
 | **Summariser** | Writes executive summary with VERDICT, SCORE, estimated fix time |
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -76,7 +63,7 @@ review_YYYYMMDD_HHMMSS.md
 | Web UI | Streamlit |
 | REST API | FastAPI + Uvicorn |
 
----
+
 
 ## ⚙️ Prerequisites
 
@@ -342,5 +329,6 @@ MIT License — free to use, modify, and distribute.
 
 Save this as `README.md` in the root of your project, push to GitHub, and it will render beautifully. 🚀```
 
-#   A g e n t i c - G i t H u b - C o d e - R e v i e w e r  
+#   A g e n t i c - G i t H u b - C o d e - R e v i e w e r 
+ 
  
