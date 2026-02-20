@@ -1,4 +1,4 @@
-# 🤖 AI Code Review Agent
+# 🤖 Agentic GitHub Code Reviewer
 
 > A fully local, privacy-safe multi-agent system that automatically reviews  
 > any GitHub repository and generates a detailed code review report 
