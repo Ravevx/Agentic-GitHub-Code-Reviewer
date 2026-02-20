@@ -139,16 +139,43 @@ Docs → http://localhost:8000/docs
 ---
 
 ## 📊 Example Output
+```
+   AI CODE REVIEW AGENT
 
+[FETCHER] Fetching repository files from GitHub...
+Repo: Machine-Learning
+Loading 9 code files...
+[FETCHER] Loaded 9 files
+
+[RAG] Building code index...
+Indexed 63 chunks from 9 files
+[RAG] Code index ready!
+
+[REVIEWER] Analysing code...
+Reviewing: decision_tree.ipynb
+Reviewing: logistic_regression.ipynb
+[REVIEWER] Reviewed 9 files
+
+[SUGGESTER] Generating fix suggestions...
+[SUGGESTER] Generated suggestions for 9 files
+
+[SUMMARISER] Writing final report...
+[SUMMARISER] Report complete!
+
+Report saved to: review_20260220_153700.md
+```
+Report output:
 ```
 VERDICT: Approved with Minor Fixes
 SCORE: 8.5/10
 SECURITY RISK: Low
 
 TOP ISSUES
-• Missing validation
-• Silent failures
-• Memory inefficiency
+• `train_claim_type.py` Data Leakage Risk
+   - Line: `self.df = self.df[self.df["claim"] == 1].reset_index(drop=True)`
+• `model_span.py` Dimension Mismatch
+  - Line: `self.classifier = nn.Linear(hidden_size, 1)`
+• `train_span.py` Unsafe Hardcoded Splits
 ```
 
 ---
@@ -156,18 +183,31 @@ TOP ISSUES
 ## 📁 Project Structure
 
 ```
-.
-├── main.py
-├── api.py
-├── app.py
-├── config.py
-├── llm.py
-├── requirements.txt
+i-Agentic-GitHub-Code-Reviewer/
 │
-├── agents/
-├── graph/
+├── main.py                  ← CLI runner
+├── api.py                   ← FastAPI REST server
+├── app.py                   ← Streamlit web UI
+├── llm.py                   ← LM Studio LLM factory
+├── config.py                ← Settings (URL, model, limits)
+├── test_lm.py               ← LM Studio connection test
+├── requirements.txt         ← Dependencies
+├── .env                     ← GitHub token (not committed)
+│
+├── tools/
+│   └── github_tools.py      ← GitHub API integration
+│
 ├── rag/
-└── tools/
+│   └── code_store.py        ← ChromaDB vector index
+│
+├── graph/
+│   └── review_graph.py      ← LangGraph pipeline
+│
+└── agents/
+    ├── fetcher.py            ← Agent 1: Fetch + RAG
+    ├── reviewer.py           ← Agent 2: Code review
+    ├── suggester.py          ← Agent 3: Fix suggestions
+    └── summariser.py         ← Agent 4: Final report
 ```
 
 ---
@@ -191,16 +231,6 @@ Model won't connect | Start LM Studio |
 Timeout | Reduce file limits |
 Import error | Upgrade packages |
 
----
-
-## 🔮 Roadmap
-
-- Async reviewing
-- AST chunking
-- Cached indexing
-- Confidence scores
-- Conditional agents
-- PR diff-only mode
 
 ---
 
