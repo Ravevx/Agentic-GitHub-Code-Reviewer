@@ -48,7 +48,7 @@ Give it any GitHub repository URL → it automatically:
 | Agent | Responsibility |
 |------|----------------|
 | **Fetcher** | Calls GitHub API, extracts code from notebooks, builds ChromaDB RAG index |
-| **Reviewer** | Static analysis — bugs, security, performance, readability |
+| **Reviewer** | Static analysis:- bugs, security, performance, readability |
 | **Suggester** | Generates before/after code fixes |
 | **Summariser** | Writes executive summary with verdict + score |
 
@@ -229,7 +229,7 @@ Context | 8192 |
 |--------|-----|
 Model won't connect | Start LM Studio |
 Timeout | Reduce file limits |
-Import error | Upgrade packages |
+Token error | Increase Tokens |
 
 
 ---
