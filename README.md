@@ -1,4 +1,4 @@
-# 🤖 Agentic GitHub Code Reviewer
+# Agentic GitHub Code Reviewer
 
 > A fully local, privacy-safe multi-agent system that automatically reviews  
 > any GitHub repository and generates a detailed code review report 
@@ -13,19 +13,19 @@
 
 ---
 
-## 📌 What It Does
+##  What It Does
 
 Give it any GitHub repository URL → it automatically:
 
-- 📥 **Fetches** all source files via GitHub API  
-- 🧠 **Indexes** code into a ChromaDB vector store (RAG)  
-- 🔍 **Reviews** each file for bugs, security issues, performance problems  
-- 💡 **Suggests** minimal, targeted code fixes  
-- 📋 **Generates** a full markdown report with executive summary + score  
+- **Fetches** all source files via GitHub API  
+- **Indexes** code into a ChromaDB vector store (RAG)  
+- **Reviews** each file for bugs, security issues, performance problems  
+- **Suggests** minimal, targeted code fixes  
+- **Generates** a full markdown report with executive summary + score  
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
                         GitHub URL
@@ -78,30 +78,30 @@ Give it any GitHub repository URL → it automatically:
 
 ---
 
-## 🚀 Setup & Installation
+## Setup & Installation
 
-### 1️⃣ Clone Repo
+### 1️. Clone Repo
 ```bash
 git clone https://github.com/Ravevx/Agentic-GitHub-Code-Reviewer.git
 cd Agentic-GitHub-Code-Reviewer
 ```
-### 2️⃣ Create Environment
+### 2️. Create Environment
 ```bash
 conda create -n agent-local python=3.11
 conda activate agent-local
 ```
 
-### 3️⃣ Install Dependencies
+### 3️. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Create `.env`
+### 4️. Create `.env`
 ```
 GITHUB_TOKEN=your_token_here
 ```
 
-### 5️⃣ Configure Model
+### 5️. Configure Model
 Edit `config.py`
 
 ```python
@@ -112,7 +112,7 @@ MAX_FILES = 5
 
 ---
 
-## ▶️ Usage
+## Usage
 
 ### CLI
 ```bash
@@ -137,7 +137,7 @@ Docs → http://localhost:8000/docs
 
 ---
 
-## 📊 Example Output
+## Example Output
 ```
    AI CODE REVIEW AGENT
 
@@ -179,7 +179,7 @@ TOP ISSUES
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 i-Agentic-GitHub-Code-Reviewer/
@@ -211,7 +211,7 @@ i-Agentic-GitHub-Code-Reviewer/
 
 ---
 
-## 🔧 Config Reference
+## Config Reference
 
 | Setting | Default |
 |--------|---------|
@@ -222,7 +222,7 @@ Context | 8192 |
 
 ---
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 | Problem | Fix |
 |--------|-----|
@@ -233,12 +233,12 @@ Token error | Increase Tokens |
 
 ---
 
-## 📜 License
+## License
 MIT License
 
 ---
 
-## 🙏 Credits
+## Credits
 
 - LangGraph
 - LM Studio
