@@ -54,7 +54,7 @@ Give it any GitHub repository URL → it automatically:
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |------|-------------|
@@ -68,7 +68,7 @@ Give it any GitHub repository URL → it automatically:
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 - Python **3.11+**
 - LM Studio installed and running
