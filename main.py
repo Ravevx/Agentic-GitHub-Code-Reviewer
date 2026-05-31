@@ -6,7 +6,7 @@ if __name__ == "__main__":
     report = run_review(pr_url)
     print(report)
 
-    # Save report
+    # Save full report
     from datetime import datetime
     filename = f"review_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
     with open(filename, "w", encoding="utf-8") as f:
